@@ -24,7 +24,7 @@ handleSlider();
 setIndicator("#ccc")
 // set passoword length
 function handleSlider(){
-
+ 
     inputSlider.value= passowordLenght;
     lengthDisplay.innerText=passowordLenght;
 
@@ -75,7 +75,7 @@ function calcStrength(){
     if(symbolCheck.checked) hasSym=true;
 
     if(hasUpper && hasLower && (hasNum || hasSym) && passowordLenght>=8){
-        setIndicator("#0f0")
+        setIndicator("#0  f0")
     }else if(
         (hasLower || hasUpper)&&
         (hasNum || hasSym)&&
@@ -91,10 +91,10 @@ function calcStrength(){
 async function copyContent(){
     try {
         await navigator.clipboard.writeText(passwordDisplay.value);
-        copymsg.innerText = "Copied"
+        copymsg.innerText = "Copied";
         
     } catch (e) {
-        copymsg.innerText="failed"
+        copymsg.innerText="failed";
     }
 
     // to make the copied text visible
@@ -142,7 +142,7 @@ allcheckbox.forEach((checbox)=>{
 inputSlider.addEventListener('input', (e)=>{
      passowordLenght= e.target.value;
      handleSlider();
-})
+}) 
 
 
 copyBtn.addEventListener("click",()=>{
@@ -169,7 +169,7 @@ generateBtn.addEventListener('click', ()=>{
 
         //lets put the stuff mentioned by the checkboxed
 
-        // if(uppercaseCheck.checked){
+        //  if(uppercaseCheck.checked){
         //     passoword +=generateUpperCase();
         // }
 
@@ -182,7 +182,7 @@ generateBtn.addEventListener('click', ()=>{
         // }
 
         // if(symbolCheck.checked){
-        //     passoword +=generateSymbol();
+        //     passoPword +=generateSymbol();
         // }
 
 
@@ -198,7 +198,7 @@ generateBtn.addEventListener('click', ()=>{
 
         if(numberCheck.checked){
                 funcARR.push(generateRandomNumber);    
-        }
+        }  
 
         if(symbolCheck.checked){
                 funcARR.push(generateSymbol);    
@@ -223,7 +223,7 @@ generateBtn.addEventListener('click', ()=>{
         //shuffel the generated password
 
         passoword= shuffelPassword(Array.from(passoword));
-        console.log("Suffling dine");
+        console.log("Suffling done");
         // show in UI
 
         passwordDisplay.value=passoword
