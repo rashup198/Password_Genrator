@@ -153,6 +153,7 @@ h1 {
     border-bottom: 0.35rem solid rgb(237, 237, 29);
     font-weight: 600;
     font-size: 1.25rem;
+    cursor: pointer;
     letter-spacing: 1px;
      
 }
